@@ -27,6 +27,12 @@ jobs:
 
       - name: Run the Postman Collection with Newman
         run:  newman run CI-CD_Practice.postman_collection.json
+
+      - name: Newman Report
+        uses: actions/upload-artifact@v3.2.2
+        with:
+          name: Newman Report
+          path: newman/*.html
             
         
       
