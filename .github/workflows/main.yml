@@ -9,7 +9,7 @@ on:
 
 jobs:
   run-tests:
-    runs-on: ubuntu-latest
+    runs-on: ec2 giyhub runner
 
     steps:
       - name: Checkout the code
