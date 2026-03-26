@@ -43,8 +43,28 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4.0.0
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
-          publish_dir: newman/
+          publish_dir: newman
+
+
+         
+      - name: Send Email notification
+        if: always()
+        uses: dawidd6/action-send-mail@v16
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{secrets.EMAIL_USERNAME}}
+          password: ${{secrets.EMAIL_PASSWORD}}
+          subject: CI-CI Test Execution Notification
+          to: deepajangid16@gmail.com
+          body:  |
+                 Hi,
+                 Execution cpmpleted. PFA
           
+          
+          
+          
+        
           
         
          
