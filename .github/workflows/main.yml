@@ -30,7 +30,8 @@ jobs:
               mkdir -p newman 
               newman run CI-CD_Practice.postman_collection.json \
                 -r cli,htmlextra \
-                --reporter-htmlextra-export newman/report.html
+                
+                --reporter-htmlextra-export ./newman/index.html
               
 
       - name: Newman Report
