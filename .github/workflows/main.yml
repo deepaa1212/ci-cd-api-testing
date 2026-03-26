@@ -57,6 +57,7 @@ jobs:
           password: ${{secrets.EMAIL_PASSWORD}}
           subject: CI-CI Test Execution Notification
           to: deepajangid16@gmail.com
+          from: deepa.jangid2026@gmail.com
           body:  |
                  Hi,
                  Execution cpmpleted. PFA
